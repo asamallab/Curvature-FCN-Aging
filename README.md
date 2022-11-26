@@ -7,7 +7,7 @@ bioRxiv 2021.11.28.470231; doi: https://doi.org/10.1101/2021.11.28.470231<br>
 (*Corresponding author)
 
 ## Summary of workflow and results
-![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary-figure.png)
+![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary_figure.png)
 
 
 * For the analysis of functional connectivity networks (FCNs) of the human brain, we spatially and temporally preprocess fMRI scans from the ABIDE-I dataset, using the MATLAB based CONN toolbox.
