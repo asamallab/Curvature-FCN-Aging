@@ -60,11 +60,15 @@ An example of the commands that can be used to compute the disrete Ricci curvatu
 
 _**FormanTriangleUndirected.cpp**_: 
 
-    _./FormanTriangleUndirected 0 example_nodefile.txt 0 example_fcn.txt example_frc_edge.txt example_frc_node.txt_
+```
+./FormanTriangleUndirected 0 example_nodefile.txt 0 example_fcn.txt example_frc_edge.txt example_frc_node.txt
+```
 
 _**OR-Undir.py**_: 
 
-    _python3 OR-UnDir.py 0 example_fcn.txt example_orc_edge.txt example_orc_node.txt_
+```
+python3 OR-UnDir.py 0 example_fcn.txt example_orc_edge.txt example_orc_node.txt
+```
 
 **Requirements**
 The Python packages required are _NetworkX_, _cvxpy_, _Numpy_
