@@ -38,9 +38,9 @@ An Excel workbook, [ST_RicciAging.xlsx](https://github.com/asamallab/Curvature-F
 1. **[generate_fcn.py](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/generate_fcn.py):**
 Python script to generate the FCN at the desired edge density.
 
-2. **FormanTriangleUndirected.cpp:** : C++ script to compute the FRC for all the edges and nodes in an undirected network. The edges of the network can be weighted or binary.
+2. **[FormanTriangleUndirected.cpp](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/FormanTriangleUndirected.cpp):** : C++ script to compute the FRC for all the edges and nodes in an undirected network. The edges of the network can be weighted or binary.
 
-3. **OR-UnDir.py:** Python script to compute the ORC for all the edges and nodes in an undirected network. The edges of the network can be weighted or binary.
+3. **[OR-UnDir.py](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/OR-UnDir.py):** Python script to compute the ORC for all the edges and nodes in an undirected network. The edges of the network can be weighted or binary.
 
 4. **[example_fcm.txt](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/example_fcm.txt):** An example FC matrix file which is the input to _generate_fcn.py_ .
 
