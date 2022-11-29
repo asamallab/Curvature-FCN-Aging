@@ -1,19 +1,17 @@
 # Curvature-FCN-Aging
 
 This repository provides the datasets and codes associated with the following manuscript:<br>
-<i>Discrete Ricci curvatures capture age-related changes in brain functional networks,</i><br>
+<i>Discrete Ricci curvatures capture age-related changes in human brain functional connectivity networks,</i><br>
 Yasharth Yadav, Pavithra Elumalai, Nitin Williams, Jürgen Jost, Areejit Samal*,<br>
-bioRxiv 2021.11.28.470231; doi: https://doi.org/10.1101/2021.11.28.470231<br>
 (*Corresponding author)
 
 ## Summary of workflow and results
 ![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary_figure.png)
 
-
-* For the analysis of functional connectivity networks (FCNs) of the human brain, we spatially and temporally preprocess fMRI scans from the ABIDE-I dataset, using the MATLAB based CONN toolbox.
-* ABIDE-I is a shared initiative by 17 individual imaging sites and compiles studies across the globe that provide raw structural and functional magnetic resonance images (MRI) of individuals with _**autism spectrum disorders (ASD)**_ and _**age matched typically developing controls (TD)**_. When we initiated our study, there were a total of 1112 subjects in ABIDE-I (539 ASD and 573 HC) out of which, we used 820 subjects (395 ASD and 425 HC) for our study. 
-* The codes that were used in our study and analysis are available in the [CODES](https://github.com/asamallab/Curvature-FCN-ASD/tree/main/CODES) folder.
-
+* We applied two notions of discrete Ricci curvature, namely Forman-Ricci curvature (FRC) and Ollivier-Ricci curvature (ORC), to study age-related changes in functional connectivity networks (FCNs) of 225 healthy human subjects in the MPI-LEMON dataset.
+* Out of the 225 subjects in the MPI-LEMON dataset included in our study, 153 subjects belonged to the **healthy young** group and 72 subjects belonged to the **healthy elderly** group.
+* We acquired raw resting state fMRI scans of the 225 subjects in the MPI-LEMON dataset, and preprocessed them using the MATLAB based CONN toolbox. 
+* 
 
 ## Protocol video 
 A visual guide to functional MRI preprocessing using CONN toolbox is available here:
