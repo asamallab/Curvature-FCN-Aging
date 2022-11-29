@@ -27,7 +27,7 @@ A list of the 225 subjects from the MPI-LEMON dataset included in our work is pr
 The preprocessed fMRI scan of each subject was parcellated into 200 regions of interest (ROIs) or nodes defined according to the [Schafer atlas](https://doi.org/10.1093/cercor/bhx179 "Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Functional Connectivity MRI"), and a 200 × 200 functional connectivity matrix was generated for each subject by computing the Pearson correlation coefficient between the time-series of all pairs of ROIs. The subfolder [FCM](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/DATA/FCM) contains the FC matrix for each subject in weighted edgelist format. Each edgelist file can be uniquely identifed by subject ID.
 
 3. **Functional Connectivity Network (FCN):**
-Using the FC matrix of each subject, we generated FCNs using a two-step filtering approach comprising maximum spanning tree (MST) followed by sparsity-based thresholding. We constructed the 49 FCNs for each subject over a wide range of edge densities between 2 - 50% edges, with an increment 1% edges.
+Using the FC matrix of each subject, we generated FCNs using a two-step filtering approach comprising maximum spanning tree (MST) followed by sparsity-based thresholding. We constructed the 49 FCNs for each subject over a wide range of edge densities between 2 - 50% edges, with an increment of 1% edges.
 The subfolder [FCN](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/DATA/FCN) contains the FCNs for each subject in weighted edgelist format. Each edgelist file can be uniquely identified by subject ID and edge density.
 
 4. **Supplementary Tables**
