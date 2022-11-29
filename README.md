@@ -71,7 +71,7 @@ python3 OR-UnDir.py 0 example_fcn.txt example_orc_edge.txt example_orc_node.txt
 ```
 
 **Requirements**
-The Python packages required are _NetworkX_, _cvxpy_, _Numpy_
+The Python packages required are _NetworkX_, _cvxpy_, _Numpy._
 
 ## References
 
