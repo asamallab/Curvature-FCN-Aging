@@ -5,54 +5,27 @@ This repository provides the datasets and codes associated with the following ma
 Yasharth Yadav, Pavithra Elumalai, Nitin Williams, Jürgen Jost, Areejit Samal*,<br>
 (*Corresponding author)
 
-## Summary of workflow and results
-![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary_figure.png)
+# Summary of workflow and results
 
 * We applied two notions of discrete Ricci curvature, namely Forman-Ricci curvature (FRC) and Ollivier-Ricci curvature (ORC), to study age-related changes in functional connectivity networks (FCNs) of 225 healthy human subjects in the MPI-LEMON dataset.
 * Out of the 225 subjects in the MPI-LEMON dataset included in our study, 153 subjects belonged to the **healthy young** group and 72 subjects belonged to the **healthy elderly** group.
 * We acquired raw resting state fMRI scans of the 225 subjects in the MPI-LEMON dataset, and preprocessed them using the MATLAB based CONN toolbox. 
-* 
+* The preprocessing pipeline used in this study is identical to our [previous work on autism spectrum disorder](https://doi.org/10.1038/s41598-022-12171-y "Graph Ricci curvatures reveal atypical functional connectivity in autism spectrum disorder") , and we have published earlier a protocol video explaining this pipeline which is available at https://youtu.be/ch7-dOA-Vlo
 
-## Protocol video 
-A visual guide to functional MRI preprocessing using CONN toolbox is available here:
-[![Protocol video](https://img.youtube.com/vi/ch7-dOA-Vlo/0.jpg)](https://www.youtube.com/watch?v=ch7-dOA-Vlo)
+![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary_figure.png)
 
-# Functional Connectivity Networks corresponding to ABIDE-I dataset
+# Repository Organization
 
-In our study, we evaluate the utility of two discrete Ricci curvatures, Forman-Ricci curvature and Ollivier-Ricci curvature that have been recently ported to the domain of complex networks, as indicators of abnormal topological organization in resting state fMRI based functional connectivity networks (FCNs) corresponding to individuals with **_autism spectrum disorder (ASD)_**. 
+The repository is organized into two folders, [CODE](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/CODE) and [DATA](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/DATA). A description of the files contained in each folder is provided below.
 
-For this investigation, we analysed spatially and temporally preprocessed rs-fMRI images of 395 individuals with autism spectrum disorder (ASD) and 425 typically developing controls (TD), using the CONN toolbox. Subsequently, 200 regions of interest (ROIs) or nodes were defined in the brain using the Schafer atlas, and a 200 × 200 functional connectivity matrix was generated for each subject by computing the Pearson correlation coefficient between the time-series of all pairs of nodes. The schematic overview of our preprocessing pipeline can be found below.
+## DATA
 
-![schema image](https://github.com/asamallab/Curvature-FCN-ASD/blob/main/README-SchemaImage.png)
+1. **List of included subjects:**
+A list of the 225 subjects from the MPI-LEMON dataset included in our work is provided in the file [cohort_information.tsv](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/DATA/cohort_information.tsv). The file contains information on the ID, age, sex and cohort of the included subjects.
 
-## Functional Connectivity Matrices (FC matrices)
+2. **Functional Connectivity (FC) Matrix:**
+The preprocessed fMRI scan of each subject was parcellated into 200 regions of interest (ROIs) or nodes defined according to the [Schafer atlas](https://doi.org/10.1093/cercor/bhx179 "Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Functional Connectivity MRI"), and a 200 × 200 functional connectivity matrix was generated for each subject by computing the Pearson correlation coefficient between the time-series of all pairs of ROIs. The subfolder [FCM](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/DATA/FCM) contains the FC matrix for each subject in weighted edgelist format. Each edgelist file can be uniquely identifed by subject ID.
 
-The 200 × 200 FC matrix of every subject, that was obtained at the end of the preprocessing pipeline is available in the edge list format (assuming the FC matrices as the adjacency matrices of complete graphs) in [FCM](https://github.com/asamallab/Curvature-FCN-ASD/tree/main/FCM) directory.
-The files contain three columns - **source**, **target** and **correlation coefficient** as edge attribute.
-
-## Functional Connectivity Networks (FCNs)
-
-From the FC matrix of a given subject, we extracted the FCNs by combining two network filtering approaches.
-
-* maximum spanning tree (MST) using Kruskal's algorithm, and 
-* sparsity-based thresholding 
-
-We constructed the FCNs over a wide range of edge densities between 0.02 or 2% edges and 0.5 or 50% edges, with an increment of 0.01 or 1% edges. 
-
-The FCNs used in our study are available in the edge list format in [FCN](https://github.com/asamallab/Curvature-FCN-ASD/tree/main/FCN) directory, and are further organised by edge densities.
-The edgelist for each FCN contains three columns - **source**, **target** and **correlation coefficient** as edge attribute.
-_Please note that all the FCNs used in our study were binarized before further analysis._
-
-## Supporting files
-
-1. **_demographic_table.tsv_**
-
-Table containing the demographic information such as imaging site, unique subject identifer, age, gender and cohort (TD/ASD) of all the 820 subjects included in our study.
-
-2. **_Schaefer200.txt_**
-
-A list of all the 200 regions of interest (nodes) in the FCNs. Please note that these regions are encoded as integers from 0 to 199 (in order) in the FCNs provided.
-
-# Supplementary Tables
-
-An Excel workbook containing all the Supplementary Tables S1-S7 for our paper can be downloaded from [Supplementary_Tables](https://github.com/asamallab/Curvature-FCN-ASD/tree/main/Supplementary_Tables) directory. A brief description of each Supplementary Table is provided as a README file inside the directory.
+3. **Functional Connectivity Network (FCN):**
+Using the FC matrix of each subject, we generated FCNs using a two-step filtering approach comprising maximum panning tree (MST) followed by sparsity-based thresholding. We constructed the 49 FCNs for each subject over a wide range of edge densities between 2 - 50% edges, with an increment 1% edges.
+The subfolder [FCN](https://github.com/asamallab/Curvature-FCN-Aging/tree/main/DATA/FCN) contains the FCNs for each subject in weighted edgelist format. Each edgelist file can be uniquely identified by subject ID and edge density.
