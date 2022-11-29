@@ -55,3 +55,25 @@ Python script to generate the FCN at the desired edge density.
 9. **[example_orc_edge.txt](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/example_orc_edge.txt):** An example edgelist file containing the values of ORC of the edges in the example FCN. This file is output to _OR-UnDir.py_ .
 
 10. **[example_orc_node.txt](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/CODE/example_orc_node.txt):** An example nodelist file containing the values of ORC of the nodes in the example FCN. This file is output to _OR-UnDir.py_ .
+
+An example of the commands that can be used to compute the disrete Ricci curvatures are provided below.
+
+_**FormanTriangleUndirected.cpp**_: 
+
+    _./FormanTriangleUndirected 0 example_nodefile.txt 0 example_fcn.txt example_frc_edge.txt example_frc_node.txt_
+
+_**OR-Undir.py**_: 
+
+    _python3 OR-UnDir.py 0 example_fcn.txt example_orc_edge.txt example_orc_node.txt_
+
+**Requirements**
+The Python packages required are _NetworkX_, _cvxpy_, _Numpy_
+
+## References
+
+Please cite the below papers if you use the codes in this repository for your work.
+
+* Y. Yadav, P. Elumalai, N. Williams, J. Jost, A. Samal, Discrete Ricci curvatures capture age-related changes in human brain functional connectivity networks bioRxiv (2022)
+* P. Elumalai, Y. Yadav, N. Williams, E. Saucan, J. Jost & A.Samal, [Graph Ricci curvatures reveal atypical functional connectivity in autism spectrum disorder](https://www.nature.com/articles/s41598-022-12171-y#citeas),  Scientific Reports 12: 8295 (2022)
+* A. Samal, R.P. Sreejith, J. Gu, S. Liu, E. Saucan & J. Jost, [Comparative analysis of two discretizations of Ricci curvature for complex networks](https://www.nature.com/articles/s41598-018-27001-3), Scientific Reports 8: 8650 (2018).
+* R.P. Sreejith, K. Mohanraj, J. Jost, E. Saucan & A. Samal, [Forman curvature for complex networks](https://iopscience.iop.org/article/10.1088/1742-5468/2016/06/063206), Journal of Statistical Mechanics: Theory and Experiment 063206 (2016).
