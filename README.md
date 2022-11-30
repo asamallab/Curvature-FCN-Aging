@@ -12,7 +12,7 @@ Yasharth Yadav, Pavithra Elumalai, Nitin Williams, Jürgen Jost, Areejit Samal*,
 * We acquired raw resting state fMRI scans of the 225 subjects in the MPI-LEMON dataset, and preprocessed them using the MATLAB based CONN toolbox. 
 * The preprocessing pipeline used in this study is identical to our [previous work on autism spectrum disorder](https://doi.org/10.1038/s41598-022-12171-y "Graph Ricci curvatures reveal atypical functional connectivity in autism spectrum disorder") , and we have published earlier a protocol video explaining this pipeline which is available at https://youtu.be/ch7-dOA-Vlo
 
-![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary_figure.png)
+![network example](https://github.com/asamallab/Curvature-FCN-Aging/blob/main/summary-figure.png)
 
 # Repository Organization
 
